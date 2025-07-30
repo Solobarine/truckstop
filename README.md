@@ -6,7 +6,7 @@ An ELD Logging and Navigation App
 
 - React
 - Typescript
-- Django
+- Django Rest Framework
 - Python
 - Leaflet
 - Open Route Service API
