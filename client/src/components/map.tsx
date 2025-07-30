@@ -99,7 +99,7 @@ const Map = ({ coordinates, segments, closeMap }: RouteProps) => {
                   </p>
                   <p>
                     <span className="font-semibold">
-                      {(step.duration / 60).toFixed(2)}
+                      {(step.duration / 60 / 60).toFixed(2)}
                     </span>{" "}
                     hrs
                   </p>

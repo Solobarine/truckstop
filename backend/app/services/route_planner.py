@@ -44,7 +44,7 @@ def get_trip_information(start, end) -> RouteResponse | ErrorResponse:
 
     return {
         "distance_miles": route_information_response["features"][0]["properties"]["summary"]["distance"] / 1609.34,
-        "duration_hours": round(route_information_response["features"][0]["properties"]["summary"]["duration"] / 60),
+        "duration_hours": round(route_information_response["features"][0]["properties"]["summary"]["duration"] / 60 / 60),
         "route_information": route_information_response["features"][0]["properties"]["segments"],
         "coordinates": route_information_response["features"][0]["geometry"]["coordinates"]
     }
