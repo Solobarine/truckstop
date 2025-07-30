@@ -30,8 +30,6 @@ const Map = ({ coordinates, segments, closeMap }: RouteProps) => {
   });
 
   const mapCenter = Math.round(path.length / 2) - 1;
-  console.log(path[mapCenter]);
-
   return (
     <div className="fixed bg-white min-h-svh z-20 top-0 right-0 w-full max-w-xl overflow-hidden">
       <button
