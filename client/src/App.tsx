@@ -12,6 +12,8 @@ const App = () => {
     cycle_hours_used: "",
   });
 
+  const BACKEND_API = import.meta.env.VITE_BACKEND_URI;
+
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<TripResult | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -70,7 +72,7 @@ const App = () => {
     setResult(null);
 
     try {
-      const response = await fetch("http://localhost:8000/plan/", {
+      const response = await fetch(`${BACKEND_API}/plan/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
