@@ -18,7 +18,7 @@ const App = () => {
   const [result, setResult] = useState<TripResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [validationErrors, setValidationErrors] = useState<Partial<FormData>>(
-    {}
+    {},
   );
   const [showMap, setShowMap] = useState(false);
 
@@ -93,7 +93,7 @@ const App = () => {
     } catch (err) {
       console.error("Trip planning error:", err);
       setError(
-        "Failed to plan trip. Please check your connection and try again."
+        "Failed to plan trip. Please check your connection and try again.",
       );
     } finally {
       setLoading(false);
